@@ -21,7 +21,7 @@ The server version is output as part of the response, and the player count is ap
 It's a very basic implementation and could easily be extended to pull additional statistics from the server if desired.
 
 # General
-If you like anything from this repo give us a follow
+If you like anything from this repo, give us a follow!
 - Twitter/<a href="https://twitter.com/UFGKirk">UFGKirk</a>
 - Twitter/<a href="https://twitter.com/beardlyness">beardlyness</a>
 
