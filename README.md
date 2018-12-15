@@ -30,6 +30,11 @@ If you have any questions feel free to email maintainer: `help [AT] UFG [DOT] gg
 
 Visit us at: https://ufg.gg | https://eldewritoserver.com 
 
+# Dependencies
+This utility depends on the presence of the following Linux software packages:
+ - curl
+ - jq
+
 # Usage Instructions
 This is a Nagios plugin, so the intended location for the file is /usr/lib/nagios/plugins/.
 
