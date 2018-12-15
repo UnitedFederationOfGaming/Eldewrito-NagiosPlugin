@@ -40,6 +40,8 @@ This is a Nagios plugin, so the intended location for the file is /usr/lib/nagio
 
 To execute the plugin, you need to know the IP address and query port of your Eldewrito server.  The default query port is 11775.
 
+If you would like some specific details about how to set this up with LibreNMS to graph your player counts, check out <a href="https://binaryimpulse.com/2018/12/monitoring-graphing-eldewrito-server-statistics-in-librenms/">this blog post</a> which we've created about the topic.
+
 Command Usage:
 
 `check_eldewrito -H $ip $port`
