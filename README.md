@@ -2,7 +2,7 @@
 Project by: United Federation of Gaming
 
 <h1 align="center">
-  <a href="https://EldewritoServer.com"><img src="https://www.eldewritoserver.com/images/logo-main.png" alt="Eldewrito Server" width="300"></a>
+  <a href="https://EldewritoServer.com"><img src="https://gg.beard.gg/images/logo-main.png" alt="Eldewrito Server" width="300"></a>
  <br />
     Eldewrito Nagios Plugin
 </h1>
