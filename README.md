@@ -34,14 +34,21 @@ Visit us at: https://ufg.gg | https://eldewritoserver.com
 This is a Nagios plugin, so the intended location for the file is /usr/lib/nagios/plugins/.
 
 To execute the plugin, you need to know the IP address and query port of your Eldewrito server.  The default query port is 11775.
+
 Command Usage:
+
 `check_eldewrito -H $ip $port`
+
 Example Usage:
+
 `check_eldewrito -H 127.0.0.1 11775`
 
 # Example Output 
+
 Example Output: (server is online and working)
+
 `OK - Eldewrito Version 0.6.1.0; | players=0;`
 
 Example Output: (sever is not responding)
+
 `CRITICAL - Eldewrito Server Did Not Respond;`
