@@ -7,7 +7,7 @@ Project by: United Federation of Gaming
     Eldewrito Nagios Plugin
 </h1>
 
-<p align="center">Project stuff for Eldewrito Server</p>
+<p align="center">Monitor Your Eldewrito Server!</p>
 
 # Summary
 This is a Nagios plugin for monitoring Eldewrito servers.  It queries the Eldewrito server directly and pulls the version number and current player count.  
