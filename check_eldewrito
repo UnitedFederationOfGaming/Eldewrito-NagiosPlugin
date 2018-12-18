@@ -29,13 +29,15 @@
 # Check Dependencies
 if [[ -z $(command -v curl) || -z $(command -v jq) ]];
 then
-	echo "UNKNOWN - Missing depenency. Please ensure that curl and jq are installed."
+	echo "Eldewrito UNKNOWN: Missing depenency. Please ensure that curl and jq are installed."
+	exit 3
 else
 	# Validate Input Variables
 	if [[ -z  "$2" || -z "$3" ]];
 	then
 		# Show Usage Information
 		echo "Usage: check_eldewrito -H 127.0.0.1 11775, replace 127.0.0.1 with your IP for the game server and 11775 with the query port."
+		exit 3
 	else
 		# Query The Game Server
 		players=$(curl -s -qqq http://$2:$3/ | jq -r '.numPlayers')
@@ -44,9 +46,11 @@ else
 		# Validate Response (just make sure values aren't blank)
 		if [[ -z "$players" || -z "$version" ]];
 		then
-			echo "CRITICAL - Eldewrito Server Did Not Respond;"
+			echo "Eldewrito CRITICAL: Server did not respond;"
+			exit 2
 		else
-			echo "OK - Eldewrito Version $version; | players=$players;"
+			echo "Eldewrito OK: Version $version; | players=$players;"
+			exit 0
 		fi
 	fi
 fi
