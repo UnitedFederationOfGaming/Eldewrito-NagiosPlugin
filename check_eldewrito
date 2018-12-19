@@ -19,7 +19,7 @@
 # description      :Nagios Plugin for Halo Online (Eldewrito) Servers
 # author           :A Project Under The United Federation of Gaming.
 # contributors     :Kirk
-# date             :12-14-2018
+# date             :12-18-2018
 # version          :0.0.2 Alpha
 # os               :Linux
 # usage            :check_eldewrito -H $ip $port
