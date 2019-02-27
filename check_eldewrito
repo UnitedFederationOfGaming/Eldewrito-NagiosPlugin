@@ -19,8 +19,8 @@
 # description      :Nagios Plugin for Halo Online (Eldewrito) Servers
 # author           :A Project Under The United Federation of Gaming.
 # contributors     :Kirk
-# date             :12-18-2018
-# version          :0.0.2 Alpha
+# date             :02-27-2019
+# version          :0.0.3 Alpha
 # os               :Linux
 # usage            :check_eldewrito -H $ip $port
 # notes            :If you have any problems, feel free to email us: help [AT] UFG [DOT] gg
@@ -39,9 +39,12 @@ else
 		echo "Usage: check_eldewrito -H 127.0.0.1 11775, replace 127.0.0.1 with your IP for the game server and 11775 with the query port."
 		exit 3
 	else
-		# Query The Game Server
-		players=$(curl -s -qqq http://$2:$3/ | jq -r '.numPlayers')
-		version=$(curl -s -qqq http://$2:$3/ | jq -r '.eldewritoVersion')
+		# Query The Game Server (10 second timeout)
+		data=$(curl -m 10 -s -qqq http://$2:$3/ )
+		players=$(echo $data| jq -r '.numPlayers')
+		maxplayers=$(echo $data | jq -r '.maxPlayers')
+		version=$(echo $data | jq -r '.eldewritoVersion')
+		name=$(echo $data | jq -r '.name')
 	
 		# Validate Response (just make sure values aren't blank)
 		if [[ -z "$players" || -z "$version" ]];
@@ -49,8 +52,9 @@ else
 			echo "Eldewrito CRITICAL: Server did not respond;"
 			exit 2
 		else
-			echo "Eldewrito OK: Version $version; | players=$players;"
+			echo "$name ($version) OK: $players/$maxplayers Players | players=$players;;;;$maxplayers"
 			exit 0
 		fi
 	fi
 fi
+
