@@ -54,7 +54,7 @@ Example Usage:
 
 Example Output: (server is online and working)
 
-`OK - Eldewrito Version 0.6.1.0; | players=0;`
+`[UFG] United Federation of Gaming [#1] - Sharp Shooters (0.6.1.0) OK: 0/16 Players | players=0;;;;16`
 
 Example Output: (sever is not responding)
 
